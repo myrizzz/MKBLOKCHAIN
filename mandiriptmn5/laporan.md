@@ -132,7 +132,11 @@ Blockchain dapat divalidasi
 | **Proof of Work** | Mekanisme yang mengharuskan sistem melakukan perhitungan sebelum blok diterima. |
 | **Difficulty**    | Tingkat kesulitan dalam mencari hash yang sesuai.                               |
 | **Previous Hash** | Hash dari blok sebelumnya yang menjadi penghubung antarblok.                    |
-| **Ledger**        | Tampilan catatan seluruh blok yang terdapat dalam blockchain.                   |
+| **Ledger**        | Tampilan catatan seluruh blok yang terdapat dalam blockchain. 
+
+## ✅ Screenshoot      
+![Output](<Screenshot 2026-10-05 130616.png>)
+![Output]({BA3CC040-A63B-4751-B366-1705CC21389A}.png)
 
 ## ✅ Kesimpulan
 
