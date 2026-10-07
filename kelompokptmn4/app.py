@@ -1,5 +1,5 @@
 import streamlit as st
-from kelompok.core import Blockchain
+from core import Blockchain
 
 st.set_page_config(page_title="Qurban Blockchain Explorer", page_icon="🔗", layout="wide")
 st.title("🐄 Blockchain untuk Rantai Pasok Hewan Qurban")
@@ -110,13 +110,14 @@ for block in chain:
         col1, col2 = st.columns(2)
 
         with col1:
-            st.write("*Data Payload:*")
+            st.write("**Data Payload:**")
             st.info(block.data)
-            st.write(f"*Timestamp:* {block.timestamp_readable}")
+            st.write(f"**Timestamp:** {block.timestamp_readable}")
 
         with col2:
-            st.write("*Kriptografi:*")
-            st.write("*Hash saat ini:*")
+            st.write("**Kriptografi:**")
+            st.write("**Hash saat ini:**")
             st.code(block.hash, language="python")
-            st.write("*Hash Sebelumnya (Pointer):*")
+            st.write("**Hash Sebelumnya (Pointer):**")
             st.code(block.prev_hash, language="python")
+            

@@ -3,7 +3,7 @@ import time
 from datetime import datetime, timezone
 
 class Block:
-    def _init_(self, index, data, prev_hash):
+    def __init__(self, index, data, prev_hash):
         self.index = index
         self.timestamp = time.time()
         self.data = data
@@ -22,7 +22,7 @@ class Block:
         return hashlib.sha256(block_string.encode()).hexdigest()
 
 class Blockchain:
-    def _init_(self):
+    def __init__(self):
         self.chain = []
         self.create_genesis_block()
 
