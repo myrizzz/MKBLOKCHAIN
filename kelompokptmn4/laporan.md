@@ -1,5 +1,5 @@
 # 🐄 Blockchain Rantai Pasok Hewan Qurban
-
+![alt text](image.png)
 ## 📌 Deskripsi
 
 Project ini merupakan aplikasi sederhana berbasis **Blockchain** untuk mencatat dan melacak proses rantai pasok hewan qurban, mulai dari pembelian dari peternak hingga distribusi daging kepada penerima.
