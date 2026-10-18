@@ -10,13 +10,13 @@ Setelah menyelesaikan praktikum ini, mahasiswa di harapkan mampu:
 ## Proses Praktikum 
 
 1. Buka [Remix IDE](https://remix.ethereum.org/) login via Gmail, bukti:
-![Foto Laporan 1](fotolaporan1.png)
+![Foto Laporan 1](fotolaporan(1).png)
 
 2. Selanjutnya membuat file Smart Contract baru.
     - Pada panel File Explorer disebelah kiri Remix IDE, buatlah sebuah file baru didalam default_workspace.
     - Beri nama file tersebut dengan (SupplyChainKopi.sol).
     - Tuliskan kode smart contract mengenai rantai pasok kopi menggunakan bahasa Solidity seperti dibawah ini:
-     ![Foto Laporan 2](fotolaporan2.png)
+     ![Foto Laporan 2](fotolaporan(2).png)
 
 3. Berikut adalah Komponen dan Fungsi didalam Smart Contact tersebut:
     1. enum StatusKopi
@@ -50,43 +50,43 @@ Setelah menyelesaikan praktikum ini, mahasiswa di harapkan mampu:
         - Pastikan Compiler yang dipilih sesuai dengan pragma di kode (misalnya versi 0.8.20 atau yang lebih baru).
         - Klik tombol Compile SupplyChainKopi.sol.
         - Hasil: Kompilasi berhasil ditandai dengan munculnya ikon centang hijau pada logo Solidity Compiler.
-        ![Foto Laporan 3](fotolaporan3.png)
+        ![Foto Laporan 3](fotolaporan(3).png)
     2. Deploy Smart Contract
         - Pindah ke menu Deploy & run transactions di panel sebelah kiri.
         - Pada bagian Environment, pilih Remix VM (Cancun) atau jaringan lokal bawaan Remix lainnya.
         - Pastikan Contract yang terpilih adalah SupplyChainKopi - default_workspace/SupplyChainKopi.sol.
         - Klik tombol Deploy.
         - Hasil: Di bagian bawah panel, pada menu Deployed Contracts, akan muncul smart contract Anda yang sudah aktif beserta daftar fungsi yang bisa dijalankan. Di terminal bawah juga akan muncul log transaksi berwarna hijau.
-        ![Foto Laporan 4](fotolaporan4.png)
+        ![Foto Laporan 4](fotolaporan(4).png)
     3. Pengujian Fungsi (Interaksi Smart Contract)
         - Pada tahap ini setiap fungsi yang di buat akan di uji untuk mensimulasikan rantai pasok kopi.
             1. Mendaftarkan Panen Baru (daftarPanenBaru)
                 - Buka dropdown pada contract yang sudah di-deploy.
                 - Pada fungsi daftarPanenBaru, masukkan parameter berikut:
-                    - _namaPetani: "Suryana"
-                    - _beratKg: 200
+                    - _namaPetani: "fariz"
+                    - _beratKg: 237
                 - Klik tombol transact.
                 - Hasil: Transaksi berhasil (centang hijau di terminal). Data panen baru telah tersimpan di blockchain.
-                ![Foto Laporan 5](fotolaporan5.png)
+                ![Foto Laporan 5](fotolaporan(5).png)
             2. Mengecek Data Kopi yang Tersimpan.
                 - Klik tombol fungsi totalKopi.
                     - Hasil: Nilainya harus 1 (karena baru 1 data yang dimasukkan).
-                    ![Foto Laporan 6](fotolaporan6.png)
+                    ![Foto Laporan 6](fotolaporan(6).png)
                 - Pada fungsi daftarKopi, masukkan angka 1 (sebagai ID kopi pertama), lalu klik panggil/tampil.
-                    - Hasil: Akan mengembalikan detail array data: id: 1, namaPetani: "Suryana", beratKg: 200, status: 0 (0 mewakili status 'Panen' pada enum), dan alamat wallet pemilik.
-                    ![Foto Laporan 7](fotolaporan7.png)
+                    - Hasil: Akan mengembalikan detail array data: id: 1, namaPetani: "fariz", beratKg: 237, status: 0 (0 mewakili status 'Panen' pada enum), dan alamat wallet pemilik.
+                    ![Foto Laporan 7](fotolaporan(7).png)
             3. Memperbarui Status Kopi (updateStatus)
                 - Pada fungsi updateStatus, masukkan parameter:
-                    - _id: 1 (ID kopi Budi)
+                    - _id: 1 (ID kopi)
                     - _statusBaru: 1 (Angka 1 mewakili status 'Diproses' pada enum)
                 - Klik tombol transact.
                 - Hasil: Transaksi berhasil. Jika Anda memanggil kembali fungsi daftarKopi dengan ID 1, nilai statusnya akan berubah menjadi 1.
-                ![Foto Laporan 8](fotolaporan8.png)
+                ![Foto Laporan 8](fotolaporan(8).png)
             4. Pengujian Validasi Keamanan (Error Handling)
                 - Pada bagian atas menu Deploy & run transactions, ubah Account (wallet address) ke akun/alamat yang berbeda dari akun yang digunakan saat deploy.
                 - Cobalah jalankan kembali fungsi updateStatus untuk ID 1.
                 - Hasil: Transaksi akan digagalkan (revert) oleh sistem dengan pesan error: "Ditolak: Anda bukan pemilik kopi ini!". Hal ini membuktikan bahwa validasi keamanan require pada smart contract berjalan dengan baik.
-                ![Foto Laporan 9](fotolaporan9.png)
+                ![Foto Laporan 9](fotolaporan(9).png)
 
 ## Kesimpulan 
 
