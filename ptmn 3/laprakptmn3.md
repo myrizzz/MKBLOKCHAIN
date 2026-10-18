@@ -56,3 +56,5 @@ Jika salah satu pemeriksaan tersebut gagal, sistem akan mendeteksi status rantai
 3. Jalankan perintah berikut melalui terminal:
    bash
    streamlit run app.py
+
+   <img width="689" height="322" alt="image" src="https://github.com/user-attachments/assets/46824df2-fa0a-4425-8551-dc6559f46081" />
